@@ -1,0 +1,26 @@
+//Se va a hacer en Java porque no existen arreglos de tamañao fijo en Python
+/**
+     * Constructor para arreglos dinámicos
+     * @param ninguno
+*/
+//Hacer una main con un ciclo que inserte números que llame un millon de veces al metodo. System.currenttimemillis    
+public class DynamicArray{
+    //Asi se documenta en Java
+    int numbers[]=new int[0];
+    int size=0;
+    int increaseFactor=2;
+
+    public void add(int number){
+        if(size<numbers.lenght){
+            numbers[size]=number;
+            size++;
+        }
+        else{
+            //Se puede utilizar Arrays.copyof
+            int newC=Math.ceil(numbers.lenght*increaseFactor);
+            int[]copy=new int[newC];
+            for(int i=0;i<numbers.lenght;i++)copy[i]=numbers[i]
+            numbers=copy;
+        }
+    }
+}
