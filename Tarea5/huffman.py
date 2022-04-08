@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 from collections import Counter
+import math
 import sys
 ans={} #dictionary with character and codification
 
@@ -39,8 +40,11 @@ def printNodes(node, val=''):
   
   
 #Read characters for system string
-chars=list(Counter(sys.argv[1]).keys())
-freq=list(Counter(sys.argv[1]).values())
+with open (sys.argv[1]) as f:
+    lines=f.readlines()
+stringintro=''.join([str(item) for item in lines])
+chars=list(Counter(stringintro).keys())
+freq=list(Counter(stringintro).values())
 
 #List of unused nodes
 nodes = []
@@ -71,11 +75,12 @@ while len(nodes) > 1:
     nodes.append(newNode)
 
 #Huffman Coding
-print("Your text is:",len(sys.argv[1])*8,"bits long")
+print("Your text is:",len(stringintro)*8,"bits long")
 printNodes(nodes[0])
 print(ans)
 bitstring=""
-for char in sys.argv[1]:
+for char in stringintro:
     bitstring=bitstring+ans[char]
 print(f"The codification for the text is: {bitstring}")
-print(f"Now, Your text is now {len(bitstring)} bits long")
+print(f"Now, your text is {len(bitstring)} bits long!")
+print(f"Entrophy equals to {math.log2(len(chars))}")
