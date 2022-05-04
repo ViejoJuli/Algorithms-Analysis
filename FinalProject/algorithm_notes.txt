@@ -1,0 +1,12 @@
+El programa de Nick Caros toma
+utiliza un algoritmo proveniente del paquete networkx(nx)
+Este es el algoritmo que nosotros necesitamos desarrollar.
+
+El algoritmo que esta desarrollado es para encontrar todos los caminos.
+
+La asignación de velocidades se está haciendo de mala forma, ya que no esta
+tomando en cuenta la hora.
+
+Que sería lo nuevo:
+Como archivo de entrada estamos tomando datos reales de velocidad en una ciudad x
+

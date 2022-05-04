@@ -1,0 +1,21 @@
+Evolution of the traffic is dynamic among time,
+they use time dependent graphs (TDG)
+
+They use probability in order to compute paths
+whose length is given with certain acurracy
+
+(En Español)
+Parte II: Nociones de TDG
+
+n=vertices 
+m=ejes
+c(e,t)=costo del eje (u,v) en el tiempo t = ct#
+
+Existe FIFO: t1<t2->t1+ct1<=t2+ct2 para cada cada eje e
+
+
+
+Parte III: Uso de restricciones en TDG
+Parte IV: Uso de probabilidades y sus problemas
+Parte V: Uso de información proveniente de sensores
+
