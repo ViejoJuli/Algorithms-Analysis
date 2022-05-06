@@ -4,18 +4,41 @@ they use time dependent graphs (TDG)
 They use probability in order to compute paths
 whose length is given with certain acurracy
 
+Shortest Path(SP)
+
 (En Español)
 Parte II: Nociones de TDG
 
 n=vertices 
 m=ejes
-c(e,t)=costo del eje (u,v) en el tiempo t = ct#
+c(e,t)=tiempo del trayecto (costo) del eje (u,v) en el tiempo t = ct#
 
 Existe FIFO: t1<t2->t1+ct1<=t2+ct2 para cada cada eje e
+
+fe(t)=t+ce(t), es decir, esta es la función que modela la hora de arrivo
+saliendo de nodo u al v en el tiempo t
 
 
 
 Parte III: Uso de restricciones en TDG
+SP  desde un nodo s a un nodo v,
+aunque dicen que toma casi el mismo tiempo que definir a cualquier nodo.
+
+
+Arboles parciales Ts como insumo de entrada, que comienza en s.
+dv camino más corto para un nodo v partiendo desde s en t0
+pv es el nodo predecesor de v en el arbol T 
+nv es el set de sucesores de v en T
+para cada nodo v, v pertenece a npv
+lv es el tiempo de arrivo a v desde s comenzando en t0
+
+
+
 Parte IV: Uso de probabilidades y sus problemas
 Parte V: Uso de información proveniente de sensores
 
+
+***Ideas Algoritmo Propio***
+1. Crear el grafo, junto con unos ejes y unos pesos
+2. Tener probabilidades para las 24 horas del día
+3. Dependiendo la hora del día se recalcula cada uno de los pesos y se sigue haciendo Dijkstra
